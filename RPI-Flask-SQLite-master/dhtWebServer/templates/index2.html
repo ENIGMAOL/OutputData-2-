@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHT Sensor data</title>
+    <link rel="stylesheet" href='../static/style.css'/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #2020ce;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        h3 {
+            margin: 5px 0;
+        }
+        .button {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        hr {
+            width: 80%;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>DHT Sensor Data</h1>
+    <h3 id="o2_slev">o2_slev ==> %</h3>
+    <h3 id="o2_sprav">o2_sprav ==> oC</h3>
+    <h3 id="t_para_ntk_a">t_para_ntk_a (Rel.) ==> %</h3>
+    <h3 id="q_gaz">q_gaz ==> %</h3>
+    <h3 id="t_para_nitk_a">t_para_nitk_a ==> oC</h3>
+    <h3 id="t_para_nitk_b">t_para_nitk_b (Rel.) ==> %</h3>
+    <h3 id="p_para">p_para ==> oC</h3>
+    <h3 id="q_per_par">q_per_par (Rel.) ==> %</h3>
+    <h3 id="q_pit_voda">q_pit_voda (Rel.) ==> %</h3>
+    <h3 id="t_vozdh_posl_rvpa">t_vozdh_posl_rvpa ==> oC</h3>
+    <h3 id="t_vozdh_posl_rvpb">t_vozdh_posl_rvpb (Rel.) ==> %</h3>
+    <h3 id="t_vozdh_posl_tvp_slev">t_vozdh_posl_tvp_slev ==> oC</h3>
+    <h3 id="t_vozdh_posl_tvp_sprav">t_vozdh_posl_tvp_sprav (Rel.) ==> %</h3>
+    <h3 id="t_posle_ekonomiz_slev">t_posle_ekonomiz_slev (Rel.) ==> %</h3>
+    <h3 id="t_posle_ekonomiz_sprav">t_posle_ekonomiz_sprav ==> oC</h3>
+    <h3 id="t_dym_zarvp_slev">t_dym_zarvp_slev (Rel.) ==> %</h3>
+    <h3 id="t_dym_zarvp_sprav">t_dym_zarvp_sprav ==> oC</h3>
+    <h3 id="t_dym_zatvp_slev">t_dym_zatvp_slev (Rel.) ==> %</h3>
+    <hr>
+    <h3 id="last-reading">Last Sensors Reading: ==> <a href="/" class="button">REFRESH</a></h3>
+    <hr>
+    <p>@2018 Developed by MJRoBot.org</p>
+
+    <script>
+        async function fetchData() {
+            try {
+                const response = await fetch('C:\Users\днс\Desktop\RPI-Flask-SQLite-master\dhtWebServer\appDhtWebServer.py');
+                if (!response.ok) {
+                    throw new Error('Ошибка сети');
+                }
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Ошибка при получении данных:', error);
+                return {};
+            }
+        }
+
+        function updateDataWindow(data) {
+            document.getElementById('o2_slev').textContent = `o2_slev ==> ${data.o2_slev } %`;
+            document.getElementById('o2_sprav').textContent = `o2_sprav ==> ${data.o2_sprav } oC`;
+            document.getElementById('t_para_ntk_a').textContent = `t_para_ntk_a (Rel.) ==> ${data.t_para_ntk_a} %`;
+            document.getElementById('q_gaz').textContent = `q_gaz ==> ${data.q_gaz } %`;
+            document.getElementById('t_para_nitk_a').textContent = `t_para_nitk_a ==> ${data.t_para_nitk_a } oC`;
+            document.getElementById('t_para_nitk_b').textContent = `t_para_nitk_b (Rel.) ==> ${data.t_para_nitk_b } %`;
+            document.getElementById('p_para').textContent = `p_para ==> ${data.p_para } oC`;
+            document.getElementById('q_per_par').textContent = `q_per_par (Rel.) ==> ${data.q_per_par } %`;
+            document.getElementById('q_pit_voda').textContent = `q_pit_voda (Rel.) ==> ${data.q_pit_voda} %`;
+            document.getElementById('t_vozdh_posl_rvpa').textContent = `t_vozdh_posl_rvpa ==> ${data.t_vozdh_posl_rvpa } oC`;
+            document.getElementById('t_vozdh_posl_rvpb').textContent = `t_vozdh_posl_rvpb (Rel.) ==> ${data.t_vozdh_posl_rvpb } %`;
+            document.getElementById('t_vozdh_posl_tvp_slev').textContent = `t_vozdh_posl_tvp_slev ==> ${data.t_vozdh_posl_tvp_slev } oC`;
+            document.getElementById('t_vozdh_posl_tvp_sprav').textContent = `t_vozdh_posl_tvp_sprav (Rel.) ==> ${data.t_vozdh_posl_tvp_sprav } %`;
+            document.getElementById('t_posle_ekonomiz_slev').textContent = `t_posle_ekonomiz_slev (Rel.) ==> ${data.t_posle_ekonomiz_slev } %`;
+            document.getElementById('t_posle_ekonomiz_sprav').textContent = `t_posle_ekonomiz_sprav ==> ${data.t_posle_ekonomiz_sprav } oC`;
+            document.getElementById('t_dym_zarvp_slev').textContent = `t_dym_zarvp_slev (Rel.) ==> ${data.t_dym_zarvp_slev } %`;
+            document.getElementById('t_dym_zarvp_sprav').textContent = `t_dym_zarvp_sprav ==> ${data.t_dym_zarvp_sprav } oC`;
+            document.getElementById('t_dym_zatvp_slev').textContent = `t_dym_zatvp_slev (Rel.) ==> ${data.t_dym_zatvp_slev } %`;
+            document.getElementById('last-reading').innerHTML = `Last Sensors Reading: ${data.date} ==> <a href="/" class="button">REFRESH</a>`;
+        }
+
+        async function refreshData() {
+            const latestData = await fetchData();
+            updateDataWindow(latestData);
+        }
+
+        setInterval(refreshData, 1000); // Обновление каждую секунду
+
+        // Инициализация при загрузке страницы
+        window.onload = refreshData;
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+	"folders": {},
+	"connections": {
+		"sqlite_ee-19541aae280-5bc845758894a40d": {
+			"provider": "sqlite-ee",
+			"driver": "sqlite_ee",
+			"name": "sensorsData.db",
+			"save-password": true,
+			"configuration": {
+				"database": "C:\\Users\\днс\\Desktop\\RPI-Flask-SQLite-master\\sensorsData.db",
+				"url": "jdbc:sqlite:C:\\Users\\днс\\Desktop\\RPI-Flask-SQLite-master\\sensorsData.db",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"properties": {
+					"sqlite-remote-enabled": "false"
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Разработка",
+			"color": "255,255,255",
+			"description": "База данных для разработки",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		}
+	}
+}

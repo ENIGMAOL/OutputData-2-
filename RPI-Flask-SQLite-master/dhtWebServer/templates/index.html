@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+   <head>
+      <title>DHT Sensor data </title>
+      <link rel="stylesheet" href='../static/style.css'/>
+   </head>
+   
+
+   <body>
+		<h1>DHT Sensor Data </h1>
+		<h3> o2_slev ==>  {{ o2_slev  }} </h3>
+		<h3> o2_sprav &nbsp; ==>  {{ o2_sprav  }} </h3>
+		<h3> t_para_ntk_a  ==>  {{ o2_slev  }} </h3>
+		<h3> q_gaz ==>  {{ q_gaz  }} </h3>
+		<h3> t_para_nitk_a &nbsp; ==>  {{ t_para_nitk_a  }} </h3>
+		<h3> t_para_nitk_b ==>  {{ t_para_nitk_b  }} </h3>
+		<h3> p_para &nbsp; ==>  {{ p_para  }} </h3>
+		<h3> q_per_par  ==>  {{ q_per_par  }} </h3>
+		<h3> q_pit_voda  ==>  {{ q_pit_voda  }} </h3>
+		<h3> t_vozdh_posl_rvpa &nbsp; ==>  {{ t_vozdh_posl_rvpa  }} </h3>
+		<h3> t_vozdh_posl_rvpb  ==>  {{ t_vozdh_posl_rvpb  }} </h3>
+		<h3> t_vozdh_posl_tvp_slev &nbsp; ==>  {{ t_vozdh_posl_tvp_slev  }} </h3>
+		<h3> t_vozdh_posl_tvp_sprav  ==>  {{ t_vozdh_posl_tvp_sprav  }} </h3>
+		<h3> t_posle_ekonomiz_slev  ==>  {{ t_posle_ekonomiz_slev  }} </h3>
+		<h3> t_posle_ekonomiz_sprav &nbsp; ==>  {{ t_posle_ekonomiz_sprav  }} </h3>
+		<h3> t_dym_zarvp_slev  ==>  {{ t_dym_zarvp_slev  }} </h3>
+		<h3> t_dym_zarvp_sprav &nbsp; ==>  {{ t_dym_zarvp_sprav  }} </h3>
+		<h3> t_dym_zatvp_slev  ==>  {{ t_dym_zatvp_slev  }} </h3>
+		<h3> t_dym_zatvp_sprav  ==>  {{ t_dym_zatvp_sprav  }} </h3>
+		<h3> t_pitvod_kotl &nbsp; ==>  {{ t_pitvod_kotl  }} oC</h3>
+		<h3> t_uhodgaz_ventur1  ==>  {{ t_uhodgaz_ventur1  }} </h3>
+		<h3> t_uhodgaz_ventur2 &nbsp; ==>  {{ t_uhodgaz_ventur2  }} </h3>
+		<h3> t_mazut  ==>  {{ t_mazut  }} </h3>
+		<h3> t_uhodgaz_ventur3  ==>  {{ t_uhodgaz_ventur3  }} </h3>
+		<h3> t_uhodgaz_ventur4 &nbsp; ==>  {{ t_uhodgaz_ventur4  }} </h3>
+		<h3> t_kontensat_sbor  ==>  {{ t_kontensat_sbor  }} </h3>
+		<h3> t_kontensat_vihkollect &nbsp; ==>  {{ t_kontensat_vihkollect  }} </h3>
+		<h3> t_vod_kollect_slev  ==>  {{ t_vod_kollect_slev  }} </h3>
+		<h3> t_vod_kollect_sprav  ==>  {{ t_vod_kollect_sprav  }} </h3>
+		<h3> t_gaz_dsa &nbsp; ==>  {{ t_gaz_dsa  }} </h3>
+		<h3> t_gaz_dsb  ==>  {{ t_gaz_dsb  }} </h3>
+		<h3> t_vozdh_pered_rvpa &nbsp; ==>  {{ t_vozdh_pered_rvpa  }} </h3>
+		<h3> t_vozdh_pered_rvpb  ==>  {{ t_vozdh_pered_rvpb  }} </h3>
+		<h3> t_vozdh_pered_tvpslev  ==>  {{ t_vozdh_pered_tvpslev  }} </h3>
+		<h3> t_vozdh_pered_tvpsprav &nbsp; ==>  {{ t_vozdh_pered_tvpsprav  }} </h3>
+		<h3> h_baraban_slev  ==>  {{ h_baraban_slev  }} </h3>
+		<h3> h_baraban_sprav &nbsp; ==>  {{ h_baraban_sprav  }} </h3>
+		<h3> p_par_do_sk  ==>  {{ p_par_do_sk  }} </h3>
+		<h3> q_par  ==>  {{ q_par  }} </h3>
+		<h3> t_par_posle_sk &nbsp; ==>  {{ t_par_posle_sk  }} </h3>
+		<h3> vakum  ==>  {{ vakum  }} </h3>
+		<h3> t_par_psg1_prov1 &nbsp; ==>  {{ t_par_psg1_prov1  }} </h3>
+		<h3> t_par_psg1_prov2  ==>  {{ t_par_psg1_prov2  }} </h3>
+		<h3> t_par_psg2  ==>  {{ t_par_psg2  }} </h3>
+		<h3> t_vod_do_psg1 &nbsp; ==>  {{ t_vod_do_psg1  }} </h3>
+		<h3> t_vod_posle_psg1  ==>  {{ t_vod_posle_psg1  }} </h3>
+		<h3> t_vod_vihod_psg12 &nbsp; ==>  {{ t_vod_vihod_psg12  }} </h3>
+		<h3> t_par_posle_ou1  ==>  {{ t_par_posle_ou1  }} </h3>
+		<h3> t_par_posle_ou2  ==>  {{ t_par_posle_ou2  }} </h3>
+		<h3> t_kondesat_do_kn &nbsp; ==>  {{ t_kondesat_do_kn  }} </h3>
+		<h3> t_cirk_vod_posle_kondensat  ==>  {{ t_cirk_vod_posle_kondensat  }} </h3>
+		<h3> t_cirk_vod_do_kondensat &nbsp; ==>  {{ t_cirk_vod_do_kondensat  }} </h3>
+		<h3> t_par_cnd_sprav  ==>  {{ t_par_cnd_sprav  }} </h3>
+		<h3> t_par_cnd_slev  ==>  {{ t_par_cnd_slev  }} </h3>
+		<h3> t_par_uplotn_kollect &nbsp; ==>  {{ t_par_uplotn_kollect  }} </h3>
+		<h3> t_kondest_posle_pnd4  ==>  {{ t_kondest_posle_pnd4  }} </h3>
+		<h3> t_vod_obvod_pvd7 &nbsp; ==>  {{ t_vod_obvod_pvd7  }} </h3>
+		<h3> t_par_pered_pn130  ==>  {{ t_par_pered_pn130  }} </h3>
+		<h3> t_vod_posle_pvd7  ==>  {{ t_vod_posle_pvd7  }} </h3>
+		<h3> p_par_k_psg1 &nbsp; ==>  {{ p_par_k_psg1  }} </h3>
+		<h3> p_par_k_psg2  ==>  {{ p_par_k_psg2  }} </h3>
+		<h3> akt_stal_vozb_paz_7 &nbsp; ==>  {{ akt_stal_vozb_paz_7  }} </h3>
+		<h3> akt_stal_vozb_paz_21  ==>  {{ akt_stal_vozb_paz_21  }} </h3>
+		<h3> akt_stal_vozb_paz_36  ==>  {{ akt_stal_vozb_paz_36  }} </h3>
+		<h3> akt_stal_vozb_paz_50 &nbsp; ==>  {{ akt_stal_vozb_paz_50  }} </h3>
+		<h3> akt_stal_vozb_paz_64  ==>  {{ akt_stal_vozb_paz_64  }} </h3>
+		<h3> akt_stal_vozb_paz_77 &nbsp; ==>  {{ akt_stal_vozb_paz_77  }} </h3>
+		<h3> akt_stal_vozb_paz_3g7  ==>  {{ akt_stal_vozb_paz_3g7  }} </h3>
+		<h3> akt_stal_vozb_paz_25g10  ==>  {{ akt_stal_vozb_paz_25g10  }} </h3>
+		<h3> akt_stal_vozb_paz_44g12 &nbsp; ==>  {{ akt_stal_vozb_paz_44g12  }} </h3>
+		<h3> akt_stal_vozb_paz_3g13  ==>  {{ akt_stal_vozb_paz_3g13  }} </h3>
+		<h3> akt_stal_vozb_paz_25g16 &nbsp; ==>  {{ akt_stal_vozb_paz_25g16  }} </h3>
+		<h3> akt_stal_vozb_paz_44g18  ==>  {{ akt_stal_vozb_paz_44g18  }} </h3>
+		<h3> t_vod_sobstv_nuzht  ==>  {{ t_vod_sobstv_nuzht  }} </h3>
+		<h3> t_vod_glav_korp_truba1 &nbsp; ==>  {{ t_vod_glav_korp_truba1  }} </h3>
+		<h3> t_vod_glav_korp_truba2  ==>  {{ t_vod_glav_korp_truba2  }} </h3>
+		<h3> t_vod_za_psn1 &nbsp; ==>  {{ t_vod_za_psn1  }} </h3>
+		<h3> t_vod_za_psn2  ==>  {{ t_vod_za_psn2  }} </h3>
+		<hr>
+		<h3> Last Sensors Reading: {{ date }} ==> <a href="/"class="button">REFRESH</a></h3>
+		<hr>
+		<p> @2018 Developed by MJRoBot.org</p>
+
+   </body>
+</html>
